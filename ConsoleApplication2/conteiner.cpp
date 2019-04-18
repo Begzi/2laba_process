@@ -52,3 +52,17 @@ void OutConteiner(ofstream &ofst, conteiner &c)
 	}
 }
 
+void OutRect(conteiner &c, ofstream &ofst) 
+{
+	ofst << "Only rectangles." << endl;
+	int k = 1;
+	for (int i = 0; i < c.len; i++) 
+	{
+		if (c.cont[i]->k == shape::RECTANGLE)
+		{
+			ofst << k << ": ";
+			OutShape(*(c.cont[i]), ofst);
+			k++;
+		}
+	}
+}

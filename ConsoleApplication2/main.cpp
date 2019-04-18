@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 	InConteiner(ifst, c);
 	ofst << "\nFilled container. " << endl;
 	OutConteiner(ofst, c);
+	OutRect(c, ofst);
 	Clear(c);
 	ofst << "\nEmpty container. " << endl;
 	cout << "\nStop" << endl;
