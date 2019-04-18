@@ -49,3 +49,17 @@ void OutShape(shape &s, ofstream &ofst)
 		ofst << "Incorrect figure!" << endl;
 	}
 }
+
+float Perimeter(shape s)
+{
+	int k = (shape::key)(s.k) + 1;
+	switch (k)
+	{
+	case 1:
+		return circlePerimeter(s.cir);
+	case 2:
+		return rectanglePerimeter(s.r);
+	default:
+		return 0;
+	}
+}

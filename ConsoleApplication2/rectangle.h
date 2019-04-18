@@ -14,3 +14,4 @@ struct  rectangle
 
 void InRectangle(rectangle &r, ifstream &ifst);
 void OutRectangle(rectangle &r, ofstream &ofst);
+float rectanglePerimeter(rectangle r);

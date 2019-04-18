@@ -49,6 +49,7 @@ void OutConteiner(ofstream &ofst, conteiner &c)
 	for (int i = 0; i < c.len; i++) {
 		ofst << i + 1 << ": ";
 		OutShape(*(c.cont[i]), ofst);
+		ofst << " Perimeter = " << Perimeter(*(c.cont[i])) << endl;
 	}
 }
 
