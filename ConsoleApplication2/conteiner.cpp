@@ -65,4 +65,4 @@ void OutRect(conteiner &c, ofstream &ofst)
 			k++;
 		}
 	}
-}
+}
