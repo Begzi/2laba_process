@@ -1,0 +1,32 @@
+
+Filled container. 
+Container contains 27 elements.
+1: It is CIRCLE green x = 0, y = 0, r = 5
+2: It is Rectangle green a = 1, b = 1, c = 2, d = 2
+3: It is Rectangle blue a = 2, b = 2, c = 3, d = 3
+4: It is CIRCLE orange x = 3, y = 4, r = 5
+5: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+6: It is CIRCLE orange x = 3, y = 4, r = 5
+7: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+8: It is CIRCLE orange x = 3, y = 4, r = 5
+9: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+10: It is CIRCLE orange x = 3, y = 4, r = 5
+11: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+12: It is CIRCLE orange x = 3, y = 4, r = 5
+13: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+14: It is CIRCLE orange x = 3, y = 4, r = 5
+15: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+16: It is CIRCLE orange x = 3, y = 4, r = 5
+17: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+18: It is CIRCLE orange x = 3, y = 4, r = 5
+19: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+20: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+21: It is Rectangle blue a = 3, b = 4, c = 2, d = 2
+22: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+23: It is Rectangle blue a = 3, b = 4, c = 2, d = 2
+24: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+25: It is Rectangle blue a = 3, b = 4, c = 2, d = 2
+26: It is Rectangle red a = 3, b = 4, c = 2, d = 2
+27: It is Rectangle blue a = 3, b = 4, c = 2, d = 2
+
+Empty container. 
