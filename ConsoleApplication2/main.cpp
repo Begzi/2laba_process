@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
 	conteiner c;
 	Init(c);
 	InConteiner(ifst, c);
+	Sort(c);
 	ofst << "\nFilled container. " << endl;
 	OutConteiner(ofst, c);
 	Clear(c);

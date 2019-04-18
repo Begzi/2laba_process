@@ -63,3 +63,6 @@ float Perimeter(shape s)
 		return 0;
 	}
 }
+bool Compare(shape *first, shape *second) {
+	return Perimeter(*first) < Perimeter(*second);
+}
