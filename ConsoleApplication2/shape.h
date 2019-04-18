@@ -10,6 +10,7 @@ struct shape
 	enum color_shape { RED, ORANGE, YELLOW, GREEN, BLUE, VIOLET };
 	color_shape color;
 	key k; // ключ
+	float p; //плотность
 	// используемые альтернативы
 	union
 	{ // используем прямое включение
