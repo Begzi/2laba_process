@@ -14,4 +14,3 @@ void Init(conteiner &c);
 void Clear(conteiner &c);
 void InConteiner(ifstream &ifst, conteiner &c);
 void OutConteiner(ofstream &ofst, conteiner &c);
-void OutShape(shape &s, ofstream &ofst);

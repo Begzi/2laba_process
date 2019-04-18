@@ -21,3 +21,4 @@ struct shape
 
 
 shape* InGeneral(ifstream &ifst);
+void OutShape(shape &s, ofstream &ofst);
