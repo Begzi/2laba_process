@@ -1,4 +1,3 @@
-
 #include "pch.h"
 #include "shape.h"
 
@@ -11,7 +10,7 @@ shape* InGeneral(ifstream &ifst)
 	ifst >> k;
 	ifst >> color;
 	sp = new shape;
-	sp->k = (shape::key)(k-1);
+	sp->k = (shape::key)(k - 1);
 	sp->color = (shape::color_shape)(color - 1);
 	switch (k)
 	{
@@ -21,6 +20,9 @@ shape* InGeneral(ifstream &ifst)
 	case 1:
 		InCircle(sp->cir, ifst);
 		return sp;
+	case 3:
+		InTrangle(sp->tr, ifst);
+		break;
 	default:
 		return 0;
 	}
@@ -45,7 +47,13 @@ void OutShape(shape &s, ofstream &ofst)
 		ofst << colorNames[s.color].data();
 		OutRectangle(s.r, ofst);
 		break;
+	case shape::key::TRANGLE:
+		ofst << "It is Trangle ";
+		ofst << colorNames[s.color].data();
+		OutTrangle(s.tr, ofst);
+		break;
 	default:
 		ofst << "Incorrect figure!" << endl;
 	}
 }
+

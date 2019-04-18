@@ -1,12 +1,11 @@
-#pragma once
-
 #include"circle.h"
 #include "rectangle.h"
+#include "trangle.h"
 
 struct shape
 {
 	// значения ключей для каждой из фигур
-	enum key { CIRCLE, RECTANGLE};
+	enum key { CIRCLE, RECTANGLE, TRANGLE };
 	enum color_shape { RED, ORANGE, YELLOW, GREEN, BLUE, VIOLET };
 	color_shape color;
 	key k; // ключ
@@ -15,9 +14,11 @@ struct shape
 	{ // используем прямое включение
 		rectangle r;
 		circle cir;
+		trangle tr;
 	};
 
 };
 
 
 shape* InGeneral(ifstream &ifst);
+

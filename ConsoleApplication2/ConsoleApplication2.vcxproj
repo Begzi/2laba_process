@@ -156,6 +156,7 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="shape.h" />
+    <ClInclude Include="trangle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="circle.cpp" />
@@ -169,6 +170,7 @@
     </ClCompile>
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="shape.cpp" />
+    <ClCompile Include="trangle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
