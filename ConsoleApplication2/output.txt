@@ -1,6 +1,6 @@
 
 Filled container. 
-Container contains 27 elements.
+Container contains 28 elements.
 1: It is CIRCLE green x = 0, y = 0, r = 5
 2: It is Rectangle green a = 1, b = 1, c = 2, d = 2
 3: It is Rectangle blue a = 2, b = 2, c = 3, d = 3
