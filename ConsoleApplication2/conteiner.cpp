@@ -52,4 +52,18 @@ void OutConteiner(ofstream &ofst, conteiner &c)
 		ofst << " Perimeter = " << Perimeter(*(c.cont[i])) << endl;
 	}
 }
-
+void Sort(conteiner &c)
+{
+	for (int i = 0; i < c.len - 1; i++)
+	{
+		for (int j = i + 1; j < c.len; j++)
+		{
+			if (Compare(c.cont[i], c.cont[j]))
+			{
+				shape *tmp = c.cont[i];
+				c.cont[i] = c.cont[j];
+				c.cont[j] = tmp;
+			}
+		}
+	}
+}
