@@ -70,6 +70,8 @@ float Perimeter(shape s)
 		return circlePerimeter(s.cir);
 	case 2:
 		return rectanglePerimeter(s.r);
+	case 3:
+		return tranglePerimeter(s.tr);
 	default:
 		return 0;
 	}

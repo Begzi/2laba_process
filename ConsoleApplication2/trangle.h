@@ -14,3 +14,4 @@ struct trangle
 
 void InTrangle(trangle &tr, ifstream &ifst);
 void OutTrangle(trangle &tr, ofstream &ofst);
+float tranglePerimeter(trangle cir);
