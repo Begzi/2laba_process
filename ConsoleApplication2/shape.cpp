@@ -21,6 +21,9 @@ shape* InGeneral(ifstream &ifst)
 	case 1:
 		InCircle(sp->cir, ifst);
 		return sp;
+	case 3:
+		InTrangle(sp->tr, ifst);
+		return sp;
 	default:
 		return 0;
 	}
@@ -44,6 +47,11 @@ void OutShape(shape &s, ofstream &ofst)
 		ofst << "It is Rectangle ";
 		ofst << colorNames[s.color].data();
 		OutRectangle(s.r, ofst);
+		break;
+	case shape::key::TRANGLE:
+		ofst << "It is Trangle ";
+		ofst << colorNames[s.color].data();
+		OutTrangle(s.tr, ofst);
 		break;
 	default:
 		ofst << "Incorrect figure!" << endl;

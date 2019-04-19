@@ -2,8 +2,8 @@
 Filled container. 
 Container contains 27 elements.
 1: It is CIRCLE green x = 0, y = 0, r = 5
-2: It is Rectangle green a = 1, b = 1, c = 2, d = 2
-3: It is Rectangle blue a = 2, b = 2, c = 3, d = 3
+2: It is Rectangle blue a = 2, b = 2, c = 3, d = 3
+3: It is Trangle orange x1 = 1 x2 = 2 y1 = 2 y2 = 3 z1 = 4 z2 = 5
 4: It is CIRCLE orange x = 3, y = 4, r = 5
 5: It is Rectangle red a = 3, b = 4, c = 2, d = 2
 6: It is CIRCLE orange x = 3, y = 4, r = 5
