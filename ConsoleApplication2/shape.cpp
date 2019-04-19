@@ -7,12 +7,14 @@ shape* InGeneral(ifstream &ifst)
 	shape *sp;
 	int k;
 	int color;
-
+	float p;
 	ifst >> k;
 	ifst >> color;
+	ifst >> p;
 	sp = new shape;
 	sp->k = (shape::key)(k-1);
 	sp->color = (shape::color_shape)(color - 1);
+	sp->p = p;
 	switch (k)
 	{
 	case 2:
@@ -39,13 +41,14 @@ void OutShape(shape &s, ofstream &ofst)
 	case shape::key::CIRCLE:
 		ofst << "It is CIRCLE ";
 		ofst << colorNames[s.color].data(); //стриг в чар, благодаря чар
-
+		ofst << "p = " << s.p << "кг/м*м*м  ";
 		OutCircle(s.cir, ofst);
 		break;
 
 	case shape::key::RECTANGLE:
 		ofst << "It is Rectangle ";
 		ofst << colorNames[s.color].data();
+		ofst << "p = " << s.p << "кг/м*м*м  ";
 		OutRectangle(s.r, ofst);
 		break;
 	case shape::key::TRANGLE:
