@@ -55,11 +55,15 @@ void OutConteiner(ofstream &ofst, conteiner &c)
 void MultiMethod(conteiner &c, ofstream &ofst)
 {
 	ofst << "Multimethod." << endl;
-	for (int i = 0; i < c.len - 1; i++) {
-		for (int j = i + 1; j < c.len; j++) {
-			switch (c.cont[i]->k) {
+	for (int i = 0; i < c.len - 1; i++)
+	{
+		for (int j = i + 1; j < c.len; j++) 
+		{
+			switch (c.cont[i]->k) 
+			{
 			case shape::RECTANGLE:
-				switch (c.cont[j]->k) {
+				switch (c.cont[j]->k) 
+				{
 				case shape::RECTANGLE:
 					ofst << "Rectangle and Rectangle." << endl;
 					break;
@@ -71,7 +75,8 @@ void MultiMethod(conteiner &c, ofstream &ofst)
 				}
 				break;
 			case shape::CIRCLE:
-				switch (c.cont[j]->k) {
+				switch (c.cont[j]->k) 
+				{
 				case shape::RECTANGLE:
 					ofst << "Circle and Rectangle." << endl;
 					break;
