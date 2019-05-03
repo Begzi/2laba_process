@@ -1,6 +1,7 @@
 
 #include "pch.h"
 #include "shape.h"
+#include <string>
 
 shape* InGeneral(ifstream &ifst)
 {
@@ -9,24 +10,86 @@ shape* InGeneral(ifstream &ifst)
 	int color;
 	float p;
 	ifst >> k;
+	if (k > 3 || k < 1)
+	{
+		cout << endl << "Key must be 0 or 1 or 3" << endl;
+		k = 0;
+	}
 	ifst >> color;
+	if (color > 6 || color < 1)
+	{
+		cout << endl << "color must be from 1 to 6" << endl;
+		k = 0;
+		color = 1;
+	}
 	ifst >> p;
+	if (p < 1)
+	{
+		cout << endl << "P must be > 0" << endl;
+		k = 0;
+		p = 1;
+	}
 	sp = new shape;
 	sp->k = (shape::key)(k-1);
 	sp->color = (shape::color_shape)(color - 1);
 	sp->p = p;
+	string buff;
+	int index = 0;
+	int bufer = ifst.tellg();
+	getline(ifst, buff, '\n');
+	for (int j = 0; j < buff.size(); j++)
+	{
+		if (buff[j] == 32)
+		{
+			index++;
+		}
+	}
+	ifst.seekg(bufer, iostream::beg);
 	switch (k)
 	{
 	case 2:
-		InRectangle(sp->r, ifst);
-		return sp;
+		if (index == 4)
+		{
+			InRectangle(sp->r, ifst);
+			return sp;
+		}
+		else
+		{
+			ifst.seekg(1, ios_base::end); //в последний символ файла
+			ifst >> k; // читаем жтот символ
+			cout << "not enough or more coordinates for rectangle";
+			return 0;
+		}
 	case 1:
-		InCircle(sp->cir, ifst);
-		return sp;
+		if (index == 3)
+		{
+			InCircle(sp->cir, ifst);
+			return sp;
+		}
+		else
+		{
+			ifst.seekg(1, ios_base::end); //в последний символ файла
+			ifst >> k; // читаем жтот символ
+			cout << "not enough or more  coordinates for circle";
+			return 0;
+		}
 	case 3:
-		InTrangle(sp->tr, ifst);
-		return sp;
+		if (index == 6)
+		{
+			InTrangle(sp->tr, ifst);
+			return sp;
+		}
+		else
+		{
+			ifst.seekg(1, ios_base::end); //в последний символ файла
+			ifst >> k; // читаем жтот символ
+			cout << "not enough  or more  coordinates for trangle";
+			return 0;
+		}
 	default:
+
+		ifst.seekg(1, ios_base::end); //в последний символ файла
+		ifst >> k; // читаем жтот символ
 		return 0;
 	}
 }

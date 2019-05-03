@@ -2,8 +2,54 @@
 
 #include "pch.h"
 #include "conteiner.h"
+#include <string>
 
+bool CheckForSymbol(ifstream &ifst, int &indexIgnore)
+{
+	string buff;
+	getline(ifst, buff, '\0');
+	bool check = true;
+	int index = 0;
+	indexIgnore = 1;
+	while (buff[indexIgnore] != '\n')
+	{
+		indexIgnore++;
+	}
+	indexIgnore++;
+	for (int i = indexIgnore; i < buff.size(); i++)
+	{
+		if (!isdigit(buff[i]) && buff[i] != 32 && buff[i] != '\n')
+		{
+			if (buff[i] == '.'  && check && index == 2)
+			{
+				if (!isdigit(buff[i - 1]) || !isdigit(buff[i + 1]))
+				{
+					return false;
+				}
+				check = false;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else if (buff[i] == 32 && i > 0)
+		{
+			index++;
+			if (!isdigit(buff[i - 1]) || !isdigit(buff[i + 1]))
+			{
+				return false;
+			}
+		}
+		else if (buff[i] == '\n')
+		{
+			check = true;
+			index = 0;
+		}
 
+	}
+	return true;
+}
 void Init(conteiner &c)
 {
 	c.len = 0;
@@ -18,8 +64,9 @@ void Clear(conteiner &c)
 	c.len = 0;
 }
 
-void InConteiner(ifstream &ifst, conteiner &c)
+void InConteiner(ifstream &ifst, conteiner &c, int indexIgnore)
 {
+	ifst.seekg(indexIgnore, iostream::beg);
 	while (!ifst.eof())
 	{
 		if (c.len < 50)
@@ -32,8 +79,8 @@ void InConteiner(ifstream &ifst, conteiner &c)
 		else
 		{
 			int buff;
-			ifst.seekg(1, ios_base::end);
-			ifst >> buff;
+			ifst.seekg(1, ios_base::end); //в последний символ файла
+			ifst >> buff; // читаем жтот символ
 			if (ifst.eof())
 			{
 				cout << "\nI work with 50 elements, input.txt have more then 50 elements";

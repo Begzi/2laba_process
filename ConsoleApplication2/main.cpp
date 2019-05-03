@@ -5,7 +5,6 @@
 #include "conteiner.h"
 
 
-
 int main(int argc, char* argv[])
 {
 	if (argc != 3) 
@@ -15,20 +14,29 @@ int main(int argc, char* argv[])
 			<< endl;
 		exit(1);
 	}
+	ifstream ifst1(argv[1]);
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
-
-	cout << "Start";
-	conteiner c;
-	Init(c);
-	InConteiner(ifst, c);
-	Sort(c);
-	ofst << "\nFilled container. " << endl;
-	OutConteiner(ofst, c);
-	OutRect(c, ofst);
-	Clear(c);
-	ofst << "\nEmpty container. " << endl;
-	cout << "\nStop" << endl;
+	int indexIgnore = 0;
+	bool check = CheckForSymbol(ifst1, indexIgnore);
+	if (check)
+	{
+		cout << "Start";
+		conteiner c;
+		Init(c);
+		InConteiner(ifst, c, indexIgnore);
+		Sort(c);
+		ofst << "\nFilled container. " << endl;
+		OutConteiner(ofst, c);
+		OutRect(c, ofst);
+		Clear(c);
+		ofst << "\nEmpty container. " << endl;
+		cout << "\nStop" << endl;
+	}
+	else
+	{
+		cout << "Symbol in input.txt" << endl;
+	}
 	return 0;
 
 }

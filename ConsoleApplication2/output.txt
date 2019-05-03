@@ -1,10 +1,15 @@
 
 Filled container. 
-Container contains 3 elements.
-1: It is CIRCLE orange p = 4Í„/Ï*Ï*Ï   x = 3, y = 2, r = 55 Perimeter = 345.4
-2: It is Trangle yellow p = 3Í„/Ï*Ï*Ï   x1 = 1 x2 = 1 y1 = 3 y2 = 1 z1 = 1 z2 = 4 Perimeter = 8.60555
-3: It is Rectangle orange p = 2Í„/Ï*Ï*Ï   a = 1, b = 1, c = 2, d = 2 Perimeter = 2
+Container contains 8 elements.
+1: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+2: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+3: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+4: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+5: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+6: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+7: It is CIRCLE orange p = 3.8Í„/Ï*Ï*Ï   x = 33, y = 2, r = 33 Perimeter = 207.24
+8: It is Rectangle orange p = 2Í„/Ï*Ï*Ï   a = 3, b = 4, c = 5, d = 6 Perimeter = 8
 Only rectangles.
-1: It is Rectangle orange p = 2Í„/Ï*Ï*Ï   a = 1, b = 1, c = 2, d = 2
+1: It is Rectangle orange p = 2Í„/Ï*Ï*Ï   a = 3, b = 4, c = 5, d = 6
 
 Empty container. 

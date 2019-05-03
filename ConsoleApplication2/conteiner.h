@@ -11,8 +11,9 @@ struct conteiner
 
 
 void Init(conteiner &c);
+bool CheckForSymbol(ifstream &ifst, int &indexIgnore);
 void Clear(conteiner &c);
-void InConteiner(ifstream &ifst, conteiner &c);
+void InConteiner(ifstream &ifst, conteiner &c, int indexIgnore);
 void OutConteiner(ofstream &ofst, conteiner &c);
 void Sort(conteiner &c);
 void OutConteiner(ofstream &ofst, conteiner &c);
