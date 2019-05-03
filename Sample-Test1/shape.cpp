@@ -41,20 +41,19 @@ void OutShape(shape &s, ofstream &ofst)
 	case shape::key::CIRCLE:
 		ofst << "It is CIRCLE ";
 		ofst << colorNames[s.color].data(); //стриг в чар, благодаря чар
-		ofst << " p = " << s.p << "кг/м*м*м  ";
+		ofst << "p = " << s.p << "кг/м*м*м  ";
 		OutCircle(s.cir, ofst);
 		break;
 
 	case shape::key::RECTANGLE:
 		ofst << "It is Rectangle ";
 		ofst << colorNames[s.color].data();
-		ofst << " p = " << s.p << "кг/м*м*м  ";
+		ofst << "p = " << s.p << "кг/м*м*м  ";
 		OutRectangle(s.r, ofst);
 		break;
 	case shape::key::TRANGLE:
 		ofst << "It is Trangle ";
 		ofst << colorNames[s.color].data();
-		ofst << " p = " << s.p << "кг/м*м*м  ";
 		OutTrangle(s.tr, ofst);
 		break;
 	default:
