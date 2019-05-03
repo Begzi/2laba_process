@@ -93,5 +93,6 @@ void MultiMethod(conteiner &c, ofstream &ofst)
 			OutShape(*(c.cont[i]), ofst);
 			OutShape(*(c.cont[j]), ofst);
 		}
-	}
+	}
+
 }
