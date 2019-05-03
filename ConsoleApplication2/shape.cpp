@@ -1,6 +1,7 @@
 
 #include "pch.h"
 #include "shape.h"
+#include "conteiner.h"
 
 shape* InGeneral(ifstream &ifst)
 {

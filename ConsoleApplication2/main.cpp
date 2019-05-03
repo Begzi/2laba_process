@@ -24,6 +24,7 @@ int main(int argc, char* argv[])
 	InConteiner(ifst, c);
 	ofst << "\nFilled container. " << endl;
 	OutConteiner(ofst, c);
+	MultiMethod(c, ofst);
 	Clear(c);
 	ofst << "\nEmpty container. " << endl;
 	cout << "\nStop" << endl;
