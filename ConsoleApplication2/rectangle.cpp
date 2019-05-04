@@ -11,7 +11,7 @@ void InRectangle(rectangle &r, ifstream &ifst)
 void OutRectangle(rectangle &r, ofstream &ofst)
 {
 	ofst << " a = " << r.a
-		<< ", b = " << r.b << ", c = " << r.c << ", d = " << r.d;
+		<< ", b = " << r.b << ", c = " << r.c << ", d = " << r.d << endl;
 }
 
 float rectanglePerimeter(rectangle r) //A { a, b } D{ c,d } C{ c,b } B{ a,d }

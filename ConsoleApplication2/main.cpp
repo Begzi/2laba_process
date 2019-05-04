@@ -28,6 +28,7 @@ int main(int argc, char* argv[])
 		Sort(c);
 		ofst << "\nFilled container. " << endl;
 		OutConteiner(ofst, c);
+		MultiMethod(c, ofst);
 		OutRect(c, ofst);
 		Clear(c);
 		ofst << "\nEmpty container. " << endl;

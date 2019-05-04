@@ -121,7 +121,7 @@ void Sort(conteiner &c)
 
 void OutRect(conteiner &c, ofstream &ofst)
 {
-	ofst << "Only rectangles." << endl;
+	ofst << endl << "Only rectangles." << endl;
 	int k = 1;
 	for (int i = 0; i < c.len; i++)
 	{
@@ -133,4 +133,68 @@ void OutRect(conteiner &c, ofstream &ofst)
 			k++;
 		}
 	}
+}
+
+void MultiMethod(conteiner &c, ofstream &ofst)
+{
+	ofst << endl << "Multimethod." << endl;
+	for (int i = 0; i < c.len - 1; i++)
+	{
+		for (int j = i + 1; j < c.len; j++)
+		{
+			switch (c.cont[i]->k)
+			{
+			case shape::RECTANGLE:
+				switch (c.cont[j]->k)
+				{
+				case shape::RECTANGLE:
+					ofst << "Rectangle and Rectangle." << endl;
+					break;
+				case shape::CIRCLE:
+					ofst << "Rectangle and Circle." << endl;
+					break;
+				case shape::TRANGLE:
+					ofst << "Rectangle and Trangle." << endl;
+				default:
+					ofst << "Unknown type" << endl;
+				}
+				break;
+			case shape::CIRCLE:
+				switch (c.cont[j]->k)
+				{
+				case shape::RECTANGLE:
+					ofst << "Circle and Rectangle." << endl;
+					break;
+				case shape::CIRCLE:
+					ofst << "Circle and Circle." << endl;
+					break;
+				case shape::TRANGLE:
+					ofst << "Circle and Trangle." << endl;
+				default:
+					ofst << "Unknown type" << endl;
+				}
+				break;
+			case shape::TRANGLE:
+				switch (c.cont[j]->k) {
+				case shape::RECTANGLE:
+					ofst << "Trangle and Rectangle." << endl;
+					break;
+				case shape::CIRCLE:
+					ofst << "Trangle and Circle." << endl;
+					break;
+				case shape::TRANGLE:
+					ofst << "Trangle and Trangle." << endl;
+					break;
+				default:
+					ofst << "Unknown type" << endl;
+				}
+
+			default:
+				ofst << "Unknown type" << endl;
+			}
+			OutShape(*(c.cont[i]), ofst);
+			OutShape(*(c.cont[j]), ofst);
+		}
+	}
+
 }

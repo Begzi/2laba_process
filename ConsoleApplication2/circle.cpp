@@ -11,7 +11,7 @@ void InCircle(circle &cir, ifstream &ifst)
 void OutCircle(circle &cir, ofstream &ofst)
 {
 	ofst << " x = "
-		<< cir.x << ", y = " << cir.y << ", r = " << cir.r;
+		<< cir.x << ", y = " << cir.y << ", r = " << cir.r << endl;
 }
 
 float circlePerimeter(circle cir)

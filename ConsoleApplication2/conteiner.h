@@ -18,3 +18,4 @@ void OutConteiner(ofstream &ofst, conteiner &c);
 void Sort(conteiner &c);
 void OutConteiner(ofstream &ofst, conteiner &c);
 void OutRect(conteiner &c, ofstream &ofst);
+void MultiMethod(conteiner &c, ofstream &ofst);
